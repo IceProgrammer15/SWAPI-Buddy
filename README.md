@@ -81,7 +81,7 @@ I also used Goolge Image Search API to retreive relevant images according to the
     #run build-all script
     $ npm run build-all
   ```
->After successful build, server folder will contain entire project (both front-end and back-end).
+>After successful build, [server](server) folder will have all the necessary files (both front-end and back-end).
 
 
 
