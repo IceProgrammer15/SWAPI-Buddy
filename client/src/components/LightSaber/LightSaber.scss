@@ -1,0 +1,148 @@
+$BeamColors: (blue:rgb(55, 132, 214),
+			  red:rgba(229, 17, 21, 1),
+			  green:rgb(135, 220, 90),
+			  yellow:rgb(255, 217, 0),
+			  magenta:#ca74dd,
+			  grey:grey);
+$laser-glow: rgba(254, 254, 254, 1);
+$glow-duration: 2s;
+
+.lightsaber {
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: 30px;
+	.laser-handle {
+		display: flex;
+		box-sizing: content-box;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		flex-shrink: 0;
+		margin: 0px;
+		z-index: 88;
+		text-indent: -9999px;
+		width: 50px;
+		height: 15px;
+		border-left: solid 4px grey;
+		border-right: solid 5px grey;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-o-border-radius: 5px;
+		-ms-border-radius: 5px;
+		background: rgb(226, 226, 226);
+
+		background: -webkit-gradient(linear, left top, left bottom, from(rgb(226, 226, 226)), color-stop(50%, rgb(219, 219, 219)), color-stop(51%, rgb(209, 209, 209)), to(rgb(254, 254, 254)));
+		background: -webkit-linear-gradient(top, rgb(226, 226, 226) 0%, rgb(219, 219, 219) 50%, rgb(209, 209, 209) 51%, rgb(254, 254, 254) 100%);
+		background: -o-linear-gradient(top, rgb(226, 226, 226) 0%, rgb(219, 219, 219) 50%, rgb(209, 209, 209) 51%, rgb(254, 254, 254) 100%);
+		background: linear-gradient(to bottom, rgb(226, 226, 226) 0%, rgb(219, 219, 219) 50%, rgb(209, 209, 209) 51%, rgb(254, 254, 254) 100%);
+		background: -ms-linear-gradient(top, rgb(226, 226, 226) 0%, rgb(219, 219, 219) 50%, rgb(209, 209, 209) 51%, rgb(254, 254, 254) 100%);
+
+
+		.switch {
+			background: #777;
+			width: 8px;
+			height: 8px;
+			margin: 0px 4px 0px 0px;
+			display: block;
+			border: solid 1px #333;
+			transition: left 200ms;
+			-moz-transition: left 200ms;
+			-webkit-transition: left 200ms;
+			-o-transition: left 200ms;
+			-ms-transition: left 200ms;
+			border-radius: 10px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-o-border-radius: 10px;
+			-ms-border-radius: 10px;
+		}
+	}
+	&.on {
+		.plasma {
+			width: 100%;
+			margin-right: 12px;
+		}
+	}
+	.plasma {
+		transition: width 300ms, ;
+		-moz-transition: width 300ms;
+		-webkit-transition: width 300ms;
+		-o-transition: width 300ms;
+		-ms-transition: width 300ms;
+		border-radius: 0 12px 12px 0;
+		width: 300px;
+		height: 10px;
+		display: block;
+		filter: blur(1px);
+		-moz-filter: blur(1px);
+		-webkit-filter: blur(1px);
+		-o-filter: blur(1px);
+		-ms-filter: blur(1px);
+		width: 0px;
+	}
+
+}
+
+@each $name,$color in $BeamColors{
+
+
+	.lightsaber.#{$name} .laser-handle {
+		.switch {
+			background-color: rgba( $color, .5 );
+		}
+	}
+
+    .#{$name}{
+        .plasma{
+		  background: $color;
+			background: -webkit-gradient(linear, left bottom, left top, from($color), color-stop(30%, $laser-glow), color-stop(47%, $laser-glow), color-stop(71%, $laser-glow), to($color));
+			background: -webkit-linear-gradient(bottom, $color 0%, $laser-glow 30%, $laser-glow 47%, $laser-glow 71%,$color 100%);
+			background: -o-linear-gradient(bottom, $color 0%, $laser-glow 30%, $laser-glow 47%, $laser-glow 71%, $color 100%);
+			background: linear-gradient(to top, $color 0%, $laser-glow 30%, $laser-glow 47%, $laser-glow 71%, $color 100%);
+			background: -ms-linear-gradient(bottom, $color 0%, $laser-glow 30%, $laser-glow 47%, $laser-glow 71%, $color 100%);
+			animation-name: laser-#{$name};
+			-moz-animation-name: laser-#{$name};
+			-webkit-animation-name: laser-#{$name};
+			-o-animation-name: laser-#{$name};
+			-ms-animation-name: laser-#{$name};
+			animation-duration: $glow-duration;
+			-moz-animation-duration: $glow-duration;
+			-webkit-animation-duration: $glow-duration;
+			-o-animation-duration: $glow-duration;
+			-ms-animation-duration: $glow-duration;
+			animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			-o-animation-iteration-count: infinite;
+			-ms-animation-iteration-count: infinite;
+        }
+	}
+	
+	@keyframes laser-#{$name} {
+		from {box-shadow: 0 0 10px 1px $color;}	
+		50% {box-shadow: 0 0 16px 1px $color;}	
+		to {box-shadow: 0 0 10px 1px $color;}
+	  }
+	@-moz-keyframeslaser-#{$name} {
+		from {box-shadow: 0 0 10px 1px $color;}	
+		50% {box-shadow: 0 0 16px 1px $color;}	
+		to {box-shadow: 0 0 10px 1px $color;}
+	  }  
+	@-webkit-keyframeslaser-#{$name} {
+		from {box-shadow: 0 0 10px 1px $color;}	
+		50% {box-shadow: 0 0 16px 1px $color;}	
+		to {box-shadow: 0 0 10px 1px $color;}
+	  }
+	@-o-keyframeslaser-#{$name} {
+		from {box-shadow: 0 0 10px 1px $color;}	
+		50% {box-shadow: 0 0 16px 1px $color;}	
+		to {box-shadow: 0 0 10px 1px $color;}
+	  }
+	@-ms-keyframeslaser-#{$name} {
+		from {box-shadow: 0 0 10px 1px $color;}	
+		50% {box-shadow: 0 0 16px 1px $color;}	
+		to {box-shadow: 0 0 10px 1px $color;}
+	  }
+}

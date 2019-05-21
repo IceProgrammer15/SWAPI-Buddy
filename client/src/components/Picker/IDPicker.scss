@@ -1,0 +1,26 @@
+.btn-picker{
+    position: absolute;
+    right: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    color: #c8c8c8;
+    cursor: pointer;
+    .dv-pre-list{
+        position: absolute;
+        top: calc(100% - 14px);
+        right: -3px;
+        min-width: 300px;
+        height: 0px;
+        overflow: hidden;
+        .list-group-item{
+            padding:0.45rem 1.25rem;
+        }   
+        z-index: 100;            
+    }
+    .item-clear{
+        color:rgb(253, 215, 143);
+    }
+}

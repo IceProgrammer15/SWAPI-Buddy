@@ -1,0 +1,39 @@
+.PersonalInfo{
+    height: 100%;
+    padding:8px;
+    .info{
+        height: 100%;
+        padding: 10px;
+        display: flex;        
+        .img-cover{
+            height: 100px;
+            width: 80px;
+            border: solid 1px #393939;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        ul{
+            list-style-type: none;
+            padding:0px;
+        }
+        .details{
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+        }
+
+        li a{
+            text-decoration: underline;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        h4{
+            color:#f2ddab;            
+            text-decoration: underline;
+        }
+        li span:last-child{
+            display: none;
+        }
+    }
+}
