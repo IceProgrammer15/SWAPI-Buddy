@@ -1,6 +1,6 @@
 var http = require('axios');
 //Search Google Images and return the first match
-const API_URL = "https://www.googleapis.com/customsearch/v1?&cx=014621090711250251352:xzzla3fanv0&key=AIzaSyArPmlu1bfRJIkg4yPKIdpHM0kcBaoB8Do&imgSize=medium&num=5&searchType=image&q=";
+const API_URL = "https://www.googleapis.com/customsearch/v1?&cx=CXCXCXCX0&key=KEYKEYKEY&imgSize=medium&num=5&searchType=image&q=";
 
 const lookupImage = async function (sQuery) {
     const URL = `${API_URL}${sQuery}`;
