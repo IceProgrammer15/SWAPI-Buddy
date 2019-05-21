@@ -7,6 +7,7 @@ Reac.js & Express.js appication for searching Star Wars charachters using [SWAPI
   <img src="swbuddy.gif" alt="SWAPI Buddy" >
 </p>
 
+[Watch it in Action: (screen capture .gif)](swbuddy.gif)
 
 ## Project Structure
 
