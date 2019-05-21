@@ -1,5 +1,5 @@
 # SWAPI Buddy 
-Reac.js & Express.js appication for searching Star Wars charachters using [SWAPI](https://swapi.co/).
+Reac.js & Express.js appication for searching Star Wars characters using [SWAPI](https://swapi.co/).
 
 
 
