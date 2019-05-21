@@ -19,7 +19,7 @@ Reac.js & Express.js appication for searching Star Wars characters using [SWAPI]
 
 ## Approach
 Data transformation and SWAPI api calls happen on the server side in [server/service/swclient.js](server/service/swclient.js) module.
-Goolge Image Search API also been used to retreive relevant images according to the search.
+Goolge Image Search API have also been used to retreive relevant images according to the search.
 
 
 
