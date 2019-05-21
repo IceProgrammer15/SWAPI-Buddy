@@ -7,6 +7,7 @@ Reac.js & Express.js appication for searching Star Wars charachters using [SWAPI
   <img src="swbuddy.gif" alt="SWAPI Buddy" >
 </p>
 
+
 ## Project Structure
 
 1. [client](client) Front-end project in react.js
